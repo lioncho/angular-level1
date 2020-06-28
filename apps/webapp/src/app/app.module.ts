@@ -23,15 +23,8 @@ import {environment} from '../environments/environment';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 
-import {PaymentDialogModule} from './shared/payment-dialog/payment-dialog.module';
-import {PaginationModule} from './shared/pagination/pagination.module';
-
-// level1
-import {ProductsComponent} from './products.component';
-import { ProductComponent } from './product/product.component';
-import {MatButtonModule} from '@angular/material/button';
-import {SharedModule} from './shared/shared.module';
-import {ProductsService} from './product/products.service';
+import {PaymentDialogModule} from "./shared/payment-dialog/payment-dialog.module";
+import {PaginationModule} from "./shared/pagination/pagination.module";
 
 const routerConfig: ExtraOptions = {
     scrollPositionRestoration: 'enabled',
@@ -45,10 +38,8 @@ export function createTranslateLoader(http: HttpClient): any {
 @NgModule({
     declarations: [
         AppComponent,
-        ProductsComponent,
-        ProductComponent,
     ],
-    imports: [
+    imports     : [
         BrowserModule,
         BrowserAnimationsModule,
         RouterModule.forRoot(appRoutes, routerConfig),
@@ -83,11 +74,8 @@ export function createTranslateLoader(http: HttpClient): any {
         PolicyDialogModule,
         PaymentDialogModule,
         PaginationModule,
-        MatButtonModule,
-        SharedModule,
 
     ],
-    providers:[ProductsService],
     bootstrap   : [
         AppComponent
     ]
