@@ -1,0 +1,15 @@
+<h1>It is products</h1>
+<form (ngSubmit)="onAddProduct(f)" #f="ngForm">
+    <input type="text" ngModel name="productName" required class="border border-r">
+    <button
+            type="submit" mat-flat-button class="mat-focus-indicator submit-button treo-mat-button-large ng-tns-c160-1 mat-flat-button mat-button-base mat-primary">
+        Add Product
+    </button>
+</form>
+
+<br>
+<!--(productClicked)="onRemoveProduct(product) : listening value from other file -->
+<!--[productName]="product" :input data -->
+<app-product
+
+             *ngFor="let product of products" [productName]="product"></app-product>
