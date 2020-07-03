@@ -5,3 +5,4 @@
 
 `yarn start:api`
 `yarn start:webapp`
+ test 
