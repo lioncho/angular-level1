@@ -1,11 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Observable, Subscription } from 'rxjs';
-import { map } from 'rxjs/operators';
-
+import { Subscription } from 'rxjs';
 import { TrainingService } from '../training.service';
 import { Exercise } from '../exercise.model';
-import {Subject} from "rxjs/Subject";
 
 
 @Component({
@@ -16,7 +13,6 @@ import {Subject} from "rxjs/Subject";
 export class NewTrainingComponent implements OnInit, OnDestroy {
   exercises: Exercise[];
   exerciseSubscription: Subscription;
-  // exercisesChanged = new Subject<Exercise[]>();
 
   constructor(
     private trainingService: TrainingService,
