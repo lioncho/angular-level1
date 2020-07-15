@@ -4,8 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-
+import {AngularFirestoreModule} from "angularfire2/firestore";
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -17,7 +16,6 @@ import { TrainingService } from './training/training.service';
 import { environment } from '../environments/environment';
 import {UiService} from "./shared/ui.service";
 import {AuthModule} from "./auth/auth.module";
-import {TrainingModule} from "./training/training.module";
 
 
 @NgModule({
@@ -37,10 +35,8 @@ import {TrainingModule} from "./training/training.module";
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-
-
     AuthModule,
-    TrainingModule,
+    AngularFirestoreModule
   ],
   providers: [AuthService, TrainingService, UiService],
   bootstrap: [AppComponent],

@@ -11,7 +11,7 @@ import {CurrentTrainingComponent} from "./current-training/current-training.comp
 import {NewTrainingComponent} from "./new-training/new-training.component";
 import {PastTrainingsComponent} from "./past-trainings/past-trainings.component";
 import {StopTrainingComponent} from "./current-training/stop-training.component";
-import {AngularFirestoreModule} from "angularfire2/firestore";
+import {TrainingRoutingModule} from "./training-routing.module";
 
 @NgModule({
     declarations: [
@@ -22,7 +22,7 @@ import {AngularFirestoreModule} from "angularfire2/firestore";
         StopTrainingComponent,
         ],
     imports: [
-        MaterialModule,FormsModule,CommonModule,FlexLayoutModule,AngularFirestoreModule,
+        MaterialModule,FormsModule,CommonModule,FlexLayoutModule,TrainingRoutingModule
     ],
     exports: [],
     entryComponents: [StopTrainingComponent]
